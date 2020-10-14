@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" href="{{asset('css/main.css')}}">
     </head>
-    <body class="theme-dark" >
+    <body class="theme-cyan theme-dark " >
     @yield('content')
      <script src="{{ asset('js/app.js') }}"></script>
     </body>

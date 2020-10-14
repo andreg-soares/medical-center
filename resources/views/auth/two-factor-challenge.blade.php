@@ -6,17 +6,17 @@
         <form class="card auth_form" method="POST" action="/two-factor-challenge">
         @csrf
             <div class="header">
-                <img class="logo" src="{{asset('assets/images/logo.svg')}}" alt="">
-                <h5>Confirme o acesso à sua conta inserindo o código de autenticação fornecido pelo seu aplicativo autenticador.</h5>
+                <img class="logo" src="{{asset('images/logo.spng')}}" alt="">
+                <h6>@lang('index.two_factor_text')</h6>
             </div>
             <div class="body">
                 <div class="input-group mb-3">
-                    <input type="numeric" name="code" class="form-control" placeholder="Codigo">
+                    <input type="numeric" name="code" class="form-control" placeholder="@lang('index.code')">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="zmdi zmdi-lock"></i></span>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Enviar</button>
+                <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">@lang('login.login')</button>
             </div>
         </form>
         <div class="copyright text-center">
