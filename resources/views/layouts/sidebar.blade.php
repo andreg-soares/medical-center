@@ -14,8 +14,8 @@
                     </div>
                 </div>
             </li>
-
-            <li class="{{ Route::currentRouteName() == 'dashboard' ? 'active open' : null }}"><a href="#"><i class="zmdi zmdi-home"></i><span>@lang('index.sidebar.dashboard')</span></a></li>
+            <li class="{{ Route::currentRouteName() == 'dashboard' ? 'active open' : null }}"><a href="{{route('dashboard')}}"><i class="zmdi zmdi-home"></i><span>@lang('index.sidebar.dashboard')</span></a></li>
+            <li class="{{ Route::currentRouteName() == 'doctors.index' ? 'active open' : null }}"><a href="{{route('doctors.index')}}"><i class="zmdi zmdi-hospital"></i><span>@lang('index.sidebar.doctor')</span></a></li>
             <li>
             <form id="form-logout" method="POST" action="{{route('logout')}}">
             @csrf
