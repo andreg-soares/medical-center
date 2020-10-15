@@ -24,8 +24,6 @@ class CreateDoctorsTable extends Migration
             $table->string('email')->nullable();
             $table->string('cellphone', 12)->nullable();
             $table->string('cpf', 11);
-            $table->date('birth')->nullable();
-            $table->enum('sex', ['M', 'F',])->default('M');
             $table->string('crm')->nullable();
             $table->timestamps();
         });

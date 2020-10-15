@@ -12,6 +12,8 @@
     </head>
     <body class="theme-cyan theme-dark " >
     @yield('content')
-
+    <script type="application/javascript">
+        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>
     </body>
 </html>
