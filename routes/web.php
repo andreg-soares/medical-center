@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+Route::middleware(['auth'])
+    ->group(function (){
+        Route::get('address/postcode/{postcode}','Dashboard\AddressController@postCode')->name('dashboard.postcode');
+        Route::resource('doctor','Dashboard\DoctorController')->names([
+            'index'   => 'doctors.index',
+            'create'  => 'doctors.create',
+            'store'   => 'doctors.store',
+            'edit'    => 'doctors.edit',
+            'update'  => 'doctors.update',
+            'destroy' => 'doctors.destroy',
+        ]);
+    });
