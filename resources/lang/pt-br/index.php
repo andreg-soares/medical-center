@@ -8,6 +8,7 @@ return [
 
     'sidebar' => [
         'dashboard' => 'Dashboard',
+        'doctor' => 'Medicos',
         'exit' => 'Sair',
     ]
 ];
