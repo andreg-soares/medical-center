@@ -58124,8 +58124,6 @@ function swalDestroy() {
   });
 }
 
-$('div.alert').not('.alert-important').delay(3000).fadeOut(350);
-
 /***/ }),
 
 /***/ "./resources/plugins/jquery-datatable/buttons/dataTables.buttons.min.js":
@@ -76762,9 +76760,9 @@ var require;var require;var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/hgfpay/Documentos/Projetos/medical-center/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/hgfpay/Documentos/Projetos/medical-center/resources/js/index.js */"./resources/js/index.js");
-module.exports = __webpack_require__(/*! /home/hgfpay/Documentos/Projetos/medical-center/resources/scss/main.scss */"./resources/scss/main.scss");
+__webpack_require__(/*! /Users/andresoares/Documents/Laravel/medical-center/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/andresoares/Documents/Laravel/medical-center/resources/js/index.js */"./resources/js/index.js");
+module.exports = __webpack_require__(/*! /Users/andresoares/Documents/Laravel/medical-center/resources/scss/main.scss */"./resources/scss/main.scss");
 
 
 /***/ })

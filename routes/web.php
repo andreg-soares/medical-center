@@ -31,4 +31,12 @@ Route::middleware(['auth'])
             'update'  => 'doctors.update',
             'destroy' => 'doctors.destroy',
         ]);
+        Route::resource('patients','Dashboard\PatientController')->names([
+            'index'   => 'patients.index',
+            'create'  => 'patients.create',
+            'store'   => 'patients.store',
+            'edit'    => 'patients.edit',
+            'update'  => 'patients.update',
+            'destroy' => 'patients.destroy',
+        ]);
     });
