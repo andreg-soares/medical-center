@@ -18,6 +18,7 @@
             <li class="{{ Route::currentRouteName() == 'doctors.index' ? 'active open' : null }}"><a href="{{route('doctors.index')}}"><i class="zmdi zmdi-hospital"></i><span>@lang('index.sidebar.doctor')</span></a></li>
             <li class="{{ Route::currentRouteName() == 'patients.index' ? 'active open' : null }}"><a href="{{route('patients.index')}}"><i class="zmdi zmdi-account"></i><span>@lang('index.sidebar.patient')</span></a></li>
             <li class="{{ Route::currentRouteName() == 'schedules.index' ? 'active open' : null }}"><a href="{{route('schedules.index')}}"><i class="zmdi zmdi-book"></i><span>@lang('index.sidebar.schedules')</span></a></li>
+            <li class="{{ Route::currentRouteName() == 'users.index' ? 'active open' : null }}"><a href="{{route('users.index')}}"><i class="zmdi zmdi-account"></i><span>@lang('index.sidebar.users')</span></a></li>
             <li>
             <form id="form-logout" method="POST" action="{{route('logout')}}">
             @csrf
