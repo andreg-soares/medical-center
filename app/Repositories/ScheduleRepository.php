@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Schedule;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+use App\Repositories\BaseRepository\BaseRepository;
 //use Your Model
 
 /**
