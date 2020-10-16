@@ -12,6 +12,7 @@ return [
     'sidebar' => [
         'dashboard' => 'Dashboard',
         'doctor' => 'Medicos',
+        'users' => 'Usuarios',
         'patient' => 'Pacientes',
         'schedules' => 'Agendamentos',
         'exit' => 'Sair',

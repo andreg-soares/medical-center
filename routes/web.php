@@ -47,4 +47,12 @@ Route::middleware(['auth'])
             'update'  => 'schedules.update',
             'destroy' => 'schedules.destroy',
         ]);
+        Route::resource('users','Dashboard\UsersController')->names([
+            'index'   => 'users.index',
+            'create'  => 'users.create',
+            'store'   => 'users.store',
+            'edit'    => 'users.edit',
+            'update'  => 'users.update',
+            'destroy' => 'users.destroy',
+        ]);
     });
