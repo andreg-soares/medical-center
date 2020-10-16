@@ -9,10 +9,11 @@
 
         <link rel="stylesheet" href="{{asset('css/main.css')}}">
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/index.js') }}"></script>
     </head>
     <body class="theme-cyan theme-dark " >
     @yield('content')
+    
+     <script src="{{ asset('js/index.js') }}"></script>
     <script type="application/javascript">
         $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
     </script>
