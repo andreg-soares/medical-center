@@ -22,8 +22,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 Route::middleware(['auth'])
     ->group(function (){
-        Route::get('address/postcode/{postcode}','Dashboard\AddressController@postCode')->name('dashboard.postcode');
-        Route::resource('doctor','Dashboard\DoctorController')->names([
+        Route::post('address/postcode','Dashboard\AddressController@postCode')->name('dashboard.postcode');
+        Route::resource('doctors','Dashboard\DoctorController')->names([
             'index'   => 'doctors.index',
             'create'  => 'doctors.create',
             'store'   => 'doctors.store',

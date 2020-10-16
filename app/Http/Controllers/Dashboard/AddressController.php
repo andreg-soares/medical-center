@@ -7,6 +7,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Exception\ServerException;
+use Illuminate\Http\Request;
 
 class AddressController extends Controller
 {
@@ -15,9 +16,9 @@ class AddressController extends Controller
      * @param $postcode
      * @return array|false|mixed
      */
-    public function postCode($postcode)
+    public function postCode(Request $request)
     {
-        $address = $this->getAddress($postcode);
+        $address = $this->getAddress($request->input('postcode'));
         if (isset($address['success']) && !$address['success']) {
             return false;
         }

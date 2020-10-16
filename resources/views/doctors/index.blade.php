@@ -6,7 +6,16 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2><strong>Listagem de</strong> Medicos</h2>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <a class="btn bg-success btn-icon float-right text-white"
+                           href="{{ route('doctors.create') }}"
+                           title="">
+                            <em class="zmdi zmdi-plus"></em>
+                        </a>
+                    </div>
+                </div>
+                <h2><strong>@lang('index.list')</strong> @lang('doctors.doctor')</h2>
             </div>
             <div class="body">
                 @if(count($doctors))
@@ -15,18 +24,18 @@
                         <table class="table table-hover js-basic-example">
                             <thead class="thead-dark">
                             <tr>
-                                <th>Nome</th>
-                                <th>Email</th>
-                                <th>CRM</th>
-                                <th>Ação</th>
+                                <th>@lang('doctors.name')</th>
+                                <th>@lang('doctors.email')</th>
+                                <th>@lang('doctors.crm')</th>
+                                <th>@lang('doctors.action')</th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
-                                <th>Nome</th>
-                                <th>Email</th>
-                                <th>CRM</th>
-                                <th>Ação</th>
+                                <th>@lang('doctors.name')</th>
+                                <th>@lang('doctors.email')</th>
+                                <th>@lang('doctors.crm')</th>
+                                <th>@lang('doctors.action')</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -45,7 +54,7 @@
                                     <a class="btn bg-red btn-icon text-white"
                                        data-toggle="tooltip"
                                        title=""
-                                       onclick="swalDestroy('{{ $doctor->uuid }}', 'cancelar')">
+                                       onclick="document.getElementById('form-destroy').submit()">
                                         <em class="zmdi zmdi-delete"></em>
                                         <form style="display:none;"
                                               action="{{ route('doctors.destroy', $doctor->uuid) }}"
@@ -64,47 +73,11 @@
                 </div>
                 @else
                 <div class="alert alert-danger">
-                    <strong>Ops !!</strong> Nao ha medicos cadastrados.
+                    <strong>@lang('index.ops')</strong> @lang('doctors.not_found')
                 </div>
                 @endif
             </div>
         </div>
     </div>
 </div>
-<script type="application/javascript">
-    $(function () {
-        $('.js-basic-example').dataTable({
-            select: false,
-            'language': {
-                'lengthMenu': 'Exibindo _MENU_ registros por página',
-                'zeroRecords': 'Nenhum registro encontrado',
-                'info': 'Exibindo página _PAGE_ de _PAGES_',
-                'infoEmpty': 'Nenhum registro disponível.',
-                'infoFiltered': 'Filtrado de _MAX_ registros totais',
-                'search': 'Pesquise',
-                "paginate": {
-                    "first": "Primeira",
-                    "last": "Ultima",
-                    "next": "Próxima",
-                    "previous": "Anterior"
-                },
-            }
-        });
-    });
-
-    function swalDestroy(){
-        Swal.fire({
-            title: 'Essa acao sera irreversível',
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: `Ok`,
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-                $('#form-destroy').submit()
-            }
-        })
-    }
-
-</script>
 @stop

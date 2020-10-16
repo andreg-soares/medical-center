@@ -9,16 +9,17 @@
     "license": "MIT",
     "require": {
         "php": "^7.3",
+        "ext-json": "*",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "laracasts/flash": "^3.2",
         "laravel/framework": "^8.0",
         "laravel/jetstream": "^1.4",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.0",
-        "your-app-rocks/eloquent-uuid": "^2.4",
-      "ext-json": "*"
+        "your-app-rocks/eloquent-uuid": "^2.4"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

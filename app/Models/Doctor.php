@@ -11,9 +11,6 @@ class Doctor extends Model
     use HasFactory;
     use HasUuid;
 
-    protected $attributes = [
-        'sex' => 'M',
-    ];
 
     protected $fillable = [
         'address_id',
@@ -23,15 +20,10 @@ class Doctor extends Model
         'email',
         'cellphone',
         'cpf',
-        'birth',
-        'sex',
         'crm',
     ];
     protected $hidden = [
         'address_id',
-    ];
-    protected $casts = [
-        'schedules' => 'array',
     ];
 
     public function address()
