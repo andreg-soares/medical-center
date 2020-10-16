@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Doctor;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+use App\Repositories\BaseRepository\BaseRepository;
 //use Your Model
 
 /**
