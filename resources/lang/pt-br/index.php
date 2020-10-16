@@ -13,6 +13,7 @@ return [
         'dashboard' => 'Dashboard',
         'doctor' => 'Medicos',
         'patient' => 'Pacientes',
+        'schedules' => 'Agendamentos',
         'exit' => 'Sair',
     ],
 

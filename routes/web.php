@@ -39,4 +39,12 @@ Route::middleware(['auth'])
             'update'  => 'patients.update',
             'destroy' => 'patients.destroy',
         ]);
+        Route::resource('schedules','Dashboard\ScheduleController')->names([
+            'index'   => 'schedules.index',
+            'create'  => 'schedules.create',
+            'store'   => 'schedules.store',
+            'edit'    => 'schedules.edit',
+            'update'  => 'schedules.update',
+            'destroy' => 'schedules.destroy',
+        ]);
     });
